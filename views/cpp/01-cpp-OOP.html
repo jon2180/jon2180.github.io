@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>C++ 面向对象 | 行也成文</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="人生如逆旅，我亦是行人。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.153b14a7.css" as="style"><link rel="preload" href="/assets/js/app.9f33a869.js" as="script"><link rel="preload" href="/assets/js/3.5b4d8017.js" as="script"><link rel="preload" href="/assets/js/1.fb27f29e.js" as="script"><link rel="preload" href="/assets/js/11.c0c00358.js" as="script"><link rel="prefetch" href="/assets/js/10.2f996c1c.js"><link rel="prefetch" href="/assets/js/12.18adb742.js"><link rel="prefetch" href="/assets/js/13.b96f1932.js"><link rel="prefetch" href="/assets/js/14.e009d60a.js"><link rel="prefetch" href="/assets/js/15.639786fd.js"><link rel="prefetch" href="/assets/js/16.bc1cb671.js"><link rel="prefetch" href="/assets/js/17.3f4e621e.js"><link rel="prefetch" href="/assets/js/18.88b75c53.js"><link rel="prefetch" href="/assets/js/19.ab43e23d.js"><link rel="prefetch" href="/assets/js/20.e77f090c.js"><link rel="prefetch" href="/assets/js/21.8fc7ba5a.js"><link rel="prefetch" href="/assets/js/22.2ff4a849.js"><link rel="prefetch" href="/assets/js/23.8ce11fb9.js"><link rel="prefetch" href="/assets/js/24.54ca93ff.js"><link rel="prefetch" href="/assets/js/25.283ee3fb.js"><link rel="prefetch" href="/assets/js/26.8a01b1be.js"><link rel="prefetch" href="/assets/js/27.f6faa1e9.js"><link rel="prefetch" href="/assets/js/28.744aa52b.js"><link rel="prefetch" href="/assets/js/29.f0db20d4.js"><link rel="prefetch" href="/assets/js/30.cb6e7ede.js"><link rel="prefetch" href="/assets/js/31.7ec349c6.js"><link rel="prefetch" href="/assets/js/32.47c77184.js"><link rel="prefetch" href="/assets/js/33.6c672661.js"><link rel="prefetch" href="/assets/js/34.1cc6dce7.js"><link rel="prefetch" href="/assets/js/35.0c3165ad.js"><link rel="prefetch" href="/assets/js/36.b133a8e5.js"><link rel="prefetch" href="/assets/js/37.ecb99aeb.js"><link rel="prefetch" href="/assets/js/38.ea24110a.js"><link rel="prefetch" href="/assets/js/39.cec749f8.js"><link rel="prefetch" href="/assets/js/4.41163c26.js"><link rel="prefetch" href="/assets/js/40.0e5d92dc.js"><link rel="prefetch" href="/assets/js/41.78c6eb9b.js"><link rel="prefetch" href="/assets/js/42.60d73858.js"><link rel="prefetch" href="/assets/js/43.e2d9768c.js"><link rel="prefetch" href="/assets/js/44.e20a521f.js"><link rel="prefetch" href="/assets/js/45.06341d99.js"><link rel="prefetch" href="/assets/js/5.a22c1a5a.js"><link rel="prefetch" href="/assets/js/6.9716d3b6.js"><link rel="prefetch" href="/assets/js/7.1f6dc96a.js"><link rel="prefetch" href="/assets/js/8.2516b778.js"><link rel="prefetch" href="/assets/js/9.c57e000d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.153b14a7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>行也成文</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>人生如逆旅，我亦是行人。</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>行也成文</span>
+            
+          <span data-v-4e82dffc>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.jpg" alt="行也成文" class="logo"> <span class="site-name">行也成文</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/C/C++/" class="nav-link"><i class="undefined"></i>
+  C/C++
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Front End/" class="nav-link"><i class="undefined"></i>
+  Front End
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Interview/" class="nav-link"><i class="undefined"></i>
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/System/" class="nav-link"><i class="undefined"></i>
+  System
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Softwares/" class="nav-link"><i class="undefined"></i>
+  Softwares
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Culture/" class="nav-link"><i class="undefined"></i>
+  Culture
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Systems/" class="nav-link"><i class="undefined"></i>
+  Systems
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Koa/" class="nav-link"><i class="undefined"></i>
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node.js/" class="nav-link"><i class="undefined"></i>
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Notes/" class="nav-link"><i class="undefined"></i>
+  Notes
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PowerShell/" class="nav-link"><i class="undefined"></i>
+  PowerShell
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/jon2180" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    行也成文
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>34</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>21</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/C/C++/" class="nav-link"><i class="undefined"></i>
+  C/C++
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Front End/" class="nav-link"><i class="undefined"></i>
+  Front End
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Interview/" class="nav-link"><i class="undefined"></i>
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/System/" class="nav-link"><i class="undefined"></i>
+  System
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Softwares/" class="nav-link"><i class="undefined"></i>
+  Softwares
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Culture/" class="nav-link"><i class="undefined"></i>
+  Culture
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Systems/" class="nav-link"><i class="undefined"></i>
+  Systems
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Koa/" class="nav-link"><i class="undefined"></i>
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node.js/" class="nav-link"><i class="undefined"></i>
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Notes/" class="nav-link"><i class="undefined"></i>
+  Notes
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PowerShell/" class="nav-link"><i class="undefined"></i>
+  PowerShell
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/jon2180" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>C++ 面向对象</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>行也成文</span>
+            
+          <span data-v-4e82dffc>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">C++ 面向对象</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>行也成文</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>9/5/2019</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>面向对象</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="抽象"><a href="#抽象" class="header-anchor">#</a> 抽象</h2> <h3 id="面向对象抽象机制"><a href="#面向对象抽象机制" class="header-anchor">#</a> 面向对象抽象机制</h3> <p>所有的编程语言都提供抽象机制。从某种程度上来说，<strong>问题的复杂度直接取决于抽象的类型与质量</strong>。这里的“类型”是指抽象的内容是什么？汇编语言是对底层机器的轻微抽象，命令式语言（C, FORTRAN, BASIC)是对汇编语言的抽象。与汇编语言相比，这类语言已经有了长足的改进，但他们的抽象原理依然要求我们这种考虑计算机的结构，而给问题的结构。</p> <p>程序员必须要在机器模型（“解决方案空间”）和实际解决的问题模型（“问题空间”）之间建造一种关联。相比之前的抽象过程，面向对象的程序设计则允许我们根据问题来描述问题，而不是根据运行解决方案的计算机。</p> <p>程序员可以利用一些工具，来表达“问题空间”中的元素（对象）。由于这种表达非常具有普遍性，所以不必受限于特别类型的问题（复用）。当然，还有一些在问题空间没有的对应的对象体。通过添加新的对象类型（类），程序可进行灵活的调整，以便与特定的类型配合。所以，在阅读描述解决方案的代码时，其实也是在阅读问题的表述。</p> <blockquote><p>Grady Booch 提供了对对象的更简洁的描述：一个对象具有自己的状态，行为和标识。这意味着对象有自己的内部数据(提供状态)、方法 (产生行为)，并彼此区分（每个对象在内存中都有唯一的地址）。</p></blockquote> <h3 id="类与对象关系"><a href="#类与对象关系" class="header-anchor">#</a> 类与对象关系</h3> <p>根据上述，简化得到说明：</p> <ul><li><strong>类</strong> - 是对问题模型中一类事物<strong>直接抽象</strong>的结果，是该类事物在程序中的表达。</li> <li><strong>对象</strong> - 问题空间中的元素以及它们在解决方案空间的表示，是类的具体表现。</li></ul> <p>在现实世界，类与对象 的关系就是“汽车与一辆汽车”的关系，是“奶牛与一头奶牛”的关系。当我们看到一辆汽车，我们可以说，“这是一辆汽车”（对象描述）和这是“这是汽车”（类描述），而“这是卡车”或“这是一头奶牛”等等描述无疑就是指鹿为马，在程序世界中这是不被允许的。</p> <p>即：</p> <p><strong>类与对象的关系</strong> - 即类型与类型实体的关系。</p> <p>以上面的汽车为例，我们来描述一下类与对象的基本特征。在谈论一辆汽车的时候，我们会这样描述它：“这辆法拉利 812 Superfast 仅仅 2.9s 的百公里加速度，轻松让你体验在踩下油门那一刻的无限快感。”根据这段描述，我们就可以得到，汽车的品牌，型号，百公里加速度等参数，和踩油门等可执行的操作。</p> <p>在我们试图根据描述，在程序世界抽象出车并描述这辆车的过程中，我们就将这些参数称作抽象作类的属性，将可执行的操作抽象成方法。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 方法 - 踩油门</span>
+    <span class="token keyword">void</span> <span class="token function">stepOnGas</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;踩下油门&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token operator">::</span>string brand<span class="token punctuation">;</span>          <span class="token comment">// 属性 - 品牌</span>
+    std<span class="token operator">::</span>string model<span class="token punctuation">;</span>          <span class="token comment">// 属性 - 型号</span>
+    <span class="token keyword">double</span> acceleration<span class="token punctuation">;</span>        <span class="token comment">// 属性 - 百公里加速度</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>在使用上述的类型获得具体的汽车时，就可以使用成员运算符 <code>.</code> 或 <code>-&gt;</code> (仅针对指针引用）来进行如下操作。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>Car foo<span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>brand <span class="token operator">=</span> <span class="token string">&quot;ferrari&quot;</span><span class="token punctuation">;</span>        <span class="token comment">// 设置品牌</span>
+foo<span class="token punctuation">.</span>model <span class="token operator">=</span> <span class="token string">&quot;812 Superfast&quot;</span><span class="token punctuation">;</span>  <span class="token comment">// 设置型号</span>
+foo<span class="token punctuation">.</span>acceleration <span class="token operator">=</span> <span class="token number">2.9</span><span class="token punctuation">;</span>       <span class="token comment">// 设置加速度 </span>
+
+foo<span class="token punctuation">.</span><span class="token function">stepOnGas</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 描述踩油门的操作</span>
+
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;brand: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span>brand <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;model: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span>model <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;acceleration: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span>acceleration <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>输出结果：</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>踩下油门
+brand<span class="token operator">:</span> ferrari
+model<span class="token operator">:</span> <span class="token number">812</span> Superfast
+acceleration<span class="token operator">:</span> <span class="token number">2.9</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="封装"><a href="#封装" class="header-anchor">#</a> 封装</h2> <p>程序员在使用面向对象思想，编写类的过程中，实际是将事物的特征及动作形成一个整体，事物的特征和动作成为了类中的属性和方法。类仅向外部调用者公开必要的内容，而隐藏内部实现的细节，这就是<strong>封装</strong>。</p> <p>封装有效地避免了该类被错误地使用与更改，减少了程序出错的可能。如果类对调用者暴露了所有细节给调用者，那么有些规则就容易被篡改。类库无法确认调用者是否会按照自己所希望的方式来调用，甚至会使类或对象被篡改，造成潜在的安全问题。“访问控制”应运而生，并从根本上阻止这种情况的发生。</p> <p>使用访问控制主要是为了：</p> <ol><li>不让调用者调用他们不应该接触的部分</li> <li>允许类创建者在不修改外部接口的情况下完善更新该工具库</li></ol> <p>针对类的属性和方法，C++ 语言中提供了三种显式权限修饰关键字。</p> <ul><li><strong>private</strong> - 仅允许类的内部访问，这也是默认情况（不添加权限修饰关键字的情况）</li> <li><strong>protected</strong> - 仅允许类的内部及其子类访问</li> <li><strong>public</strong> - 允许外部访问</li></ul> <p>这里我们再对上一节中出现的例子进行优化。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// 构造函数</span>
+    <span class="token function">Car</span><span class="token punctuation">(</span>std<span class="token operator">::</span>string brand<span class="token punctuation">,</span> std<span class="token operator">::</span>string model<span class="token punctuation">,</span> <span class="token keyword">double</span> acce<span class="token punctuation">)</span>
+            <span class="token operator">:</span> <span class="token function">brand</span><span class="token punctuation">(</span>brand<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">model</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">acceleration</span><span class="token punctuation">(</span>acce<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token comment">// 方法 - 踩油门</span>
+    <span class="token keyword">void</span> <span class="token function">stepOnGas</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;踩下油门&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token operator">::</span>string <span class="token function">getBrand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> brand<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token operator">::</span>string <span class="token function">getModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> model<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">double</span> <span class="token function">getAcceleration</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> acceleration<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>  <span class="token comment">// 隐藏内部细节</span>
+    std<span class="token operator">::</span>string brand<span class="token punctuation">;</span>          <span class="token comment">// 属性 - 品牌</span>
+    std<span class="token operator">::</span>string model<span class="token punctuation">;</span>          <span class="token comment">// 属性 - 型号</span>
+    <span class="token keyword">double</span> acceleration<span class="token punctuation">;</span>        <span class="token comment">// 属性 - 百公里加速度</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>上述代码，将三个属性设置成了私有。此时，再尝试在类外部直接修改或访问其私有属性，会报编译错误</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>Car foo<span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>brand <span class="token operator">=</span> <span class="token string">&quot;ferrari&quot;</span><span class="token punctuation">;</span>        <span class="token comment">// error: 'std::__cxx11::string Car::brand' is private within this context</span>
+
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;brand: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span>brand <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span> <span class="token comment">// error: 'std::__cxx11::string Car::brand' is private within this context</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>正确的使用方式应该是：</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>Car foo <span class="token operator">=</span> <span class="token function">Car</span><span class="token punctuation">(</span><span class="token string">&quot;ferrari&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;812 Superfast&quot;</span><span class="token punctuation">,</span> <span class="token number">2.9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;brand: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span><span class="token function">getBrand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;model: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span><span class="token function">getModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;acceleration: &quot;</span> <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">.</span><span class="token function">getAcceleration</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+foo<span class="token punctuation">.</span><span class="token function">stepOnGas</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h2> <p>类的概念组成了的编程语言的基本单元。但新的问题产生了，在创建了一个类之后，即使一个新类与之具有相似的功能，但我们仍然必须重新创建一个新类。但我们若能利用现成的数据类型，对其进行克隆，在根据需求进行修改，情况就变得理想得多。</p> <p>“继承”正是解决了这个问题。继承实际是一种面向对象语言所提供的代码复用机制。继承并不完全等同于“克隆”。在继承关系中，我们通常称被继承的类为基类，继承得到的类为派生类。</p> <p><img src="/img/03-cpp/01-base-derived.png" alt="基类派生类"></p> <p>继承通过基类和派生类的概念来表达类与类之间的相似性。基类包含派生自它的类型之间共享的所有特征和行为，尽管私有类型被隐藏起来并且不可访问。创建基类以表示思想的核心。从基类中派生出其他类型来表示实现该核心的不同方式。类型的层次结构体现了其间的相似性和差异性。</p> <p>比如，对一个形状，基类是 <code>Shape</code> , 每个形状都有其颜色，大小，位置等，每个形状都可以绘制，擦除，移动，着色等等。由此，可以派生出具体类型的形状--圆形，正方形，三角形，每个形状都有附加的特征或行为。在形状中，某些形状可以翻转，某些的行为可能不同，比如形状面积的计算。</p> <p><img src="/img/03-cpp/02-shape.png" alt="Shape"></p> <blockquote><p>注意，C++ 是一门支持多继承的语言</p></blockquote> <p>C++ 继承中的访问权限管理：</p> <p><img src="/img/03-cpp/03-access_control.png" alt="类继承的访问权限控制"></p> <p>横轴表示基类的权限，纵轴表示子类的继承权限，中间为在派生类中的访问权限。上表要记有些麻烦。但细心的伙伴可能已经发现，基类的属性方法，在派生类中的访问权限实际是由其在基类中的权限与子类的继承权限中较安全的一个来决定的（安全性： <code>private</code> &gt; <code>protected</code> &gt; <code>public</code>）。</p> <p>我们仍然以前“形状”的例子来展示继承的 C++ 实现，以及继承权限的问题（这里并不会涉及到多继承，多继承之后有机会再讲）。</p> <p>下面一个类是 <code>Shape</code> 类，为基类。其中成员属性和方法，关于颜色的为 <code>public</code> , 关于位置的为 <code>protected</code> , 关于大小或显隐的为 <code>private</code> 。代码中关于权限的注释的含义是： <code>继承权限 + 原方法在基类中的权限 = 在当前类的权限</code>。</p> <p>如果已经比较了解继承相关的信息，下面的代码部分，可以跳过。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token comment">// Shape.h</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string color<span class="token punctuation">;</span>   <span class="token comment">// 颜色</span>
+
+    <span class="token function">Shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">color</span><span class="token punctuation">(</span><span class="token string">&quot;blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">positionX</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">positionY</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Shape constructor without parameters&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token operator">::</span>string <span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> color<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">setColor</span><span class="token punctuation">(</span>std<span class="token operator">::</span>string c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>color <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">move</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">protected</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> positionX<span class="token punctuation">;</span>    <span class="token comment">// 位置 x</span>
+    <span class="token keyword">double</span> positionY<span class="token punctuation">;</span>    <span class="token comment">// 位置 y</span>
+    <span class="token keyword">void</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token keyword">double</span> offsetX<span class="token punctuation">,</span> <span class="token keyword">double</span> offsetY<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        positionX <span class="token operator">+=</span> offsetX<span class="token punctuation">;</span>
+        positionY <span class="token operator">+=</span> offsetY<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> size<span class="token punctuation">;</span>         <span class="token comment">// 大小</span>
+
+    <span class="token keyword">void</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;draw Shape&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;erase Shape&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token comment">// Circle.h 其中 Circle 类 public 继承 Shape 类</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Shape.h&quot;</span></span>
+
+ <span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Shape</span></span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// public 继承</span>
+
+        <span class="token comment">// public + public = public</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">setColor</span><span class="token punctuation">(</span><span class="token string">&quot;circle-color&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>color <span class="token operator">=</span> <span class="token string">&quot;circle-color-2&quot;</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+        <span class="token comment">// public + protected = protected</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>positionX <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>positionY <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">move</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;position: &quot;</span> <span class="token operator">&lt;&lt;</span> positionX <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; &quot;</span> <span class="token operator">&lt;&lt;</span> positionY <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+        <span class="token comment">// public + private = 不可访问，会出现编译错误</span>
+        <span class="token comment">// Error 注释掉是为了方便测试时编译通过</span>
+        <span class="token comment">// std::cout &lt;&lt; this-&gt;size &lt;&lt; std::endl;</span>
+        <span class="token comment">// this-&gt;draw();</span>
+        <span class="token comment">// this-&gt;erase();</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token comment">// Square.h 其中 Square 类 protected 继承 Shape 类</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Shape.h&quot;</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">protected</span> <span class="token class-name">Shape</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Square</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// protected 继承</span>
+
+        <span class="token comment">// protected + public = protected</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">setColor</span><span class="token punctuation">(</span><span class="token string">&quot;Square-color&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>color <span class="token operator">=</span> <span class="token string">&quot;Square-color-2&quot;</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+        <span class="token comment">// protected + protected = protected</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>positionX <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>positionY <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">move</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;position: &quot;</span> <span class="token operator">&lt;&lt;</span> positionX <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; &quot;</span> <span class="token operator">&lt;&lt;</span> positionY <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+        <span class="token comment">// protected + private = 不可访问，会出现编译错误</span>
+        <span class="token comment">// Error 注释掉是为了方便测试时编译通过</span>
+        <span class="token comment">// std::cout &lt;&lt; this-&gt;size &lt;&lt; std::endl;</span>
+        <span class="token comment">// this-&gt;draw();</span>
+        <span class="token comment">// this-&gt;erase();</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token comment">// Triangle.h 其中 Triangle 类 private 继承 Shape 类</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Shape.h&quot;</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">Triangle</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">private</span> <span class="token class-name">Shape</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Triangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// private 继承</span>
+
+        <span class="token comment">// private + public = private</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">setColor</span><span class="token punctuation">(</span><span class="token string">&quot;Triangle-color&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>color <span class="token operator">=</span> <span class="token string">&quot;Triangle-color-2&quot;</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+        <span class="token comment">// private + protected = private</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>positionX <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>positionY <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">move</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;position: &quot;</span> <span class="token operator">&lt;&lt;</span> positionX <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; &quot;</span> <span class="token operator">&lt;&lt;</span> positionY <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+        <span class="token comment">// private + private =  不可访问，会出现编译错误</span>
+        <span class="token comment">// Error 注释掉是为了方便测试时编译通过</span>
+        <span class="token comment">// std::cout &lt;&lt; this-&gt;size &lt;&lt; std::endl;</span>
+        <span class="token comment">// this-&gt;draw();</span>
+        <span class="token comment">// this-&gt;erase();</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token comment">// RightTriangle.h 其中 RightTriangle 类 public 继承 Triangle</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Triangle.h&quot;</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">RightTriangle</span><span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Triangle</span></span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>
+Circle cc<span class="token punctuation">;</span>
+<span class="token comment">// cc 可见属性方法：</span>
+cc<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span><span class="token string">&quot;cc-color&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;cc.getColor(): &quot;</span> <span class="token operator">&lt;&lt;</span> cc<span class="token punctuation">.</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;cc.color: &quot;</span> <span class="token operator">&lt;&lt;</span> cc<span class="token punctuation">.</span>color <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+Square ss<span class="token punctuation">;</span>
+<span class="token comment">// cc 可见属性方法: 无</span>
+
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+Triangle tt<span class="token punctuation">;</span>
+<span class="token comment">// tt 可见属性方法：无</span>
+
+std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+RightTriangle rt<span class="token punctuation">;</span>
+<span class="token comment">// rt 可见属性方法：无</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>控制台得到输出</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Shape constructor without parameters
+circle-color
+circle-color-2
+position: 20 20
+cc.getColor(): cc-color
+cc.color: cc-color
+
+
+Shape constructor without parameters
+Square-color
+Square-color-2
+position: 30 30
+
+
+Shape constructor without parameters
+triangle
+Triangle-color
+Triangle-color-2
+position: 40 40
+
+
+Shape constructor without parameters
+triangle
+Triangle-color
+Triangle-color-2
+position: 40 40
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>由此可见，当基类中的属性和方法权限为 <code>private</code> 时， 无论子类或是外部，都无法调用。其他情况下，以继承权限和原方法在基类中的权限中较安全的一个来算。</p> <p>有没有伙伴好奇为什么我要在基类 <code>Shape</code> 中输出一段文字 <code>Shape constructor without parameters</code> , 从结果我们可以看到，每次在实例化子类时，该文字都被输出了一遍，即使实例化的是子类的子类 <code>RightTriangle</code>。其实，当我们在子类被实例化时，系统会隐式地先实例化父类的对象。在 Java 或 JavaScript等语言，甚至有 <code>super</code> 关键字获取父类对象。</p> <p>还有更多知识值得去说的，如果有机会（我有更深刻的理解），之后慢慢写。</p> <h2 id="多态"><a href="#多态" class="header-anchor">#</a> 多态</h2> <p>我们在处理类的层次结构时，通常把一个对象看成是它所属的基类，而不是把它当成具体类。通过这种方式，我们可以编写出不局限于特定类型的代码。在上个“形状”的例子中，“方法”（method）操纵的是通用“形状”，而不关心它们是“圆”、“正方形”、“三角形”还是某种尚未定义的形状。所有的形状都可以被绘制、擦除和移动，因此“方法”向其中的任何代表“形状”的对象发送消息都不必担心对象如何处理信息。</p> <p>这样的代码不会受添加的新类型影响，并且添加新类型是扩展面向对象程序以处理新情况的常用方法。 例如，你可以通过通用的“形状”基类派生出新的“五角形”形状的子类，而不需要修改通用&quot;形状&quot;基类的方法。通过派生新的子类来扩展设计的这种能力是封装变化的基本方法之一。</p> <p>这种能力改善了我们的设计，且减少了软件的维护代价。如果我们把派生的对象类型统一看成是它本身的基类（“圆”当作“形状”，“自行车”当作“车”，“鸬鹚”当作“鸟”等等），编译器（compiler）在编译时期就无法准确地知道什么“形状”被擦除，哪一种“车”在行驶，或者是哪种“鸟”在飞行。这就是关键所在：当程序接收这种消息时，程序员并不想知道哪段代码会被执行。“绘图”的方法可以平等地应用到每种可能的“形状”上，形状会依据自身的具体类型执行恰当的代码。</p> <p>在上面几节的示例代码中，我们常常称 <code>Shape</code>，<code>Triangle</code>等类型被称为具体类型。之所以被称为具体类型（concrete type），是因为他们的表现形式属于定义的一部分。在这一点上，他们与内置类型很类似。相反，抽象类型（abstract type）则将使用者与类的实现细节完全隔离开来。为了做到这一点，我们分离接口与表现形式并且放弃了纯局部变量。</p> <p>首先，我们为 <code>Shape</code> 类设计接口（相对之上版本做了简化），现在的 <code>Shape</code> 类可以看成是比 之前的 <code>Shape</code> 更抽象的一个版本。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token comment">// Shape.h</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  <span class="token comment">// 纯虚函数</span>
+
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// </span>
+
+    <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">Shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>       <span class="token comment">// 虚析构函数很重要，之后有机会再讲。</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>对于后面定义的那些特定形状来说，上面的 <code>Shape</code> 类是一个纯粹的接口。关键字 <code>virtual</code> 的意思是“可能随后在其派生类中重新定义”。这种用关键字 <code>virtual</code> 声明的函数被称作“虚函数”。<code>Shape</code> 的派生类负责为其提供具体的接口实现。看起来有点儿奇怪的 <code>=0</code> 说明该函数是“纯虚函数”，意味着其派生类必须定义这个函数。因此，我们不能用 <code>Shape</code> 类来实例化一个对象，它只是作为接口出现，其派生类才负责具体实现其方法。含有纯虚函数的类称为“抽象类”。</p> <p>现在我们可以这么使用 <code>Shape</code> 类：</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token keyword">void</span> <span class="token function">use</span><span class="token punctuation">(</span>Shape<span class="token operator">&amp;</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    s<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    s<span class="token punctuation">.</span><span class="token function">move</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>注意看，上面的 <code>use()</code> 是如何在完全忽视实现细节的情况下使用的 <code>Shape</code> 接口的。它使用了 <code>draw()</code>，<code>move()</code>，却根本不知道是哪个类型实现了他们。如果一个类负责为其他一些类提供接口，那么我们把前者称为“多态类型”。</p> <p>我们现在重构一下之前的 <code>Circle</code> 类。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Shape</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> c<span class="token punctuation">,</span> <span class="token keyword">double</span> r<span class="token punctuation">)</span>
+        <span class="token operator">:</span> <span class="token function">center</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">radius</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// code ...</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// code ...</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">void</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// code ...</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token operator">~</span><span class="token function">Shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>       <span class="token comment">// 虚析构函数很重要，之后有机会再讲。</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> center<span class="token punctuation">;</span>    <span class="token comment">// 圆心</span>
+    <span class="token keyword">double</span> radius<span class="token punctuation">;</span>    <span class="token comment">// 半径</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>我们现在来使用上面的 <code>Circle</code> 类。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>Circle cc <span class="token punctuation">{</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">use</span><span class="token punctuation">(</span>cc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>我们在调用 <code>Shape</code> 类方法的时候我们不需要知道具体执行了哪部分代码，那我们就能添加一个新的不同执行方式的子类而不需要更改调用它的方法。</p> <blockquote><p>思考：那么编译器在不确定该执行哪部分代码时是怎么做的呢?
+（提示：虚函数表）欲知后事如何，且听下回分解</p></blockquote> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>（个人总结）</p> <ul><li>合理抽象是编写面向对象程序的基础</li> <li>封装保证了程序的安全性</li> <li>继承是一种代码的重用机制，同时，也是 <code>C++</code> 语言世界中多态的基础</li> <li>真正面向对象的魅力来源于多态</li></ul> <h3 id="引用"><a href="#引用" class="header-anchor">#</a> 引用</h3> <ul><li><a href="https://lingcoder.github.io/OnJava8/#/" target="_blank" rel="noopener noreferrer"><strong>On Java 8 - Bruce Eckel</strong>(网友中译版)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><strong>C++ 程序设计语言 - Bjarne Stroustrup</strong> 第四版</li></ul> <h3 id="留言"><a href="#留言" class="header-anchor">#</a> 留言</h3> <p>这是我目前对“面向对象几大特性”的理解分享，其中难免会有我所没有理解透的，或者误解的内容。随着我的不断学习，内容可能也会不断更新。如果文内有写的不对的地方，还请各位看官留言反馈😂，我会立即修正，并加强学习。</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">10/23/2021, 4:31:30 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#抽象" class="sidebar-link reco-side-抽象" data-v-70334359>抽象</a></li><li class="level-3" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#面向对象抽象机制" class="sidebar-link reco-side-面向对象抽象机制" data-v-70334359>面向对象抽象机制</a></li><li class="level-3" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#类与对象关系" class="sidebar-link reco-side-类与对象关系" data-v-70334359>类与对象关系</a></li><li class="level-2" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#封装" class="sidebar-link reco-side-封装" data-v-70334359>封装</a></li><li class="level-2" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#继承" class="sidebar-link reco-side-继承" data-v-70334359>继承</a></li><li class="level-2" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#多态" class="sidebar-link reco-side-多态" data-v-70334359>多态</a></li><li class="level-2" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#总结" class="sidebar-link reco-side-总结" data-v-70334359>总结</a></li><li class="level-3" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#引用" class="sidebar-link reco-side-引用" data-v-70334359>引用</a></li><li class="level-3" data-v-70334359><a href="/views/cpp/01-cpp-OOP.html#留言" class="sidebar-link reco-side-留言" data-v-70334359>留言</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.9f33a869.js" defer></script><script src="/assets/js/3.5b4d8017.js" defer></script><script src="/assets/js/1.fb27f29e.js" defer></script><script src="/assets/js/11.c0c00358.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL学习笔记 | 行也成文</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="人生如逆旅，我亦是行人。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.153b14a7.css" as="style"><link rel="preload" href="/assets/js/app.9f33a869.js" as="script"><link rel="preload" href="/assets/js/3.5b4d8017.js" as="script"><link rel="preload" href="/assets/js/1.fb27f29e.js" as="script"><link rel="preload" href="/assets/js/45.06341d99.js" as="script"><link rel="prefetch" href="/assets/js/10.2f996c1c.js"><link rel="prefetch" href="/assets/js/11.c0c00358.js"><link rel="prefetch" href="/assets/js/12.18adb742.js"><link rel="prefetch" href="/assets/js/13.b96f1932.js"><link rel="prefetch" href="/assets/js/14.e009d60a.js"><link rel="prefetch" href="/assets/js/15.639786fd.js"><link rel="prefetch" href="/assets/js/16.bc1cb671.js"><link rel="prefetch" href="/assets/js/17.3f4e621e.js"><link rel="prefetch" href="/assets/js/18.88b75c53.js"><link rel="prefetch" href="/assets/js/19.ab43e23d.js"><link rel="prefetch" href="/assets/js/20.e77f090c.js"><link rel="prefetch" href="/assets/js/21.8fc7ba5a.js"><link rel="prefetch" href="/assets/js/22.2ff4a849.js"><link rel="prefetch" href="/assets/js/23.8ce11fb9.js"><link rel="prefetch" href="/assets/js/24.54ca93ff.js"><link rel="prefetch" href="/assets/js/25.283ee3fb.js"><link rel="prefetch" href="/assets/js/26.8a01b1be.js"><link rel="prefetch" href="/assets/js/27.f6faa1e9.js"><link rel="prefetch" href="/assets/js/28.744aa52b.js"><link rel="prefetch" href="/assets/js/29.f0db20d4.js"><link rel="prefetch" href="/assets/js/30.cb6e7ede.js"><link rel="prefetch" href="/assets/js/31.7ec349c6.js"><link rel="prefetch" href="/assets/js/32.47c77184.js"><link rel="prefetch" href="/assets/js/33.6c672661.js"><link rel="prefetch" href="/assets/js/34.1cc6dce7.js"><link rel="prefetch" href="/assets/js/35.0c3165ad.js"><link rel="prefetch" href="/assets/js/36.b133a8e5.js"><link rel="prefetch" href="/assets/js/37.ecb99aeb.js"><link rel="prefetch" href="/assets/js/38.ea24110a.js"><link rel="prefetch" href="/assets/js/39.cec749f8.js"><link rel="prefetch" href="/assets/js/4.41163c26.js"><link rel="prefetch" href="/assets/js/40.0e5d92dc.js"><link rel="prefetch" href="/assets/js/41.78c6eb9b.js"><link rel="prefetch" href="/assets/js/42.60d73858.js"><link rel="prefetch" href="/assets/js/43.e2d9768c.js"><link rel="prefetch" href="/assets/js/44.e20a521f.js"><link rel="prefetch" href="/assets/js/5.a22c1a5a.js"><link rel="prefetch" href="/assets/js/6.9716d3b6.js"><link rel="prefetch" href="/assets/js/7.1f6dc96a.js"><link rel="prefetch" href="/assets/js/8.2516b778.js"><link rel="prefetch" href="/assets/js/9.c57e000d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.153b14a7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>行也成文</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>人生如逆旅，我亦是行人。</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>行也成文</span>
+            
+          <span data-v-4e82dffc>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.jpg" alt="行也成文" class="logo"> <span class="site-name">行也成文</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/C/C++/" class="nav-link"><i class="undefined"></i>
+  C/C++
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Front End/" class="nav-link"><i class="undefined"></i>
+  Front End
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Interview/" class="nav-link"><i class="undefined"></i>
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/System/" class="nav-link"><i class="undefined"></i>
+  System
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Softwares/" class="nav-link"><i class="undefined"></i>
+  Softwares
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Culture/" class="nav-link"><i class="undefined"></i>
+  Culture
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Systems/" class="nav-link"><i class="undefined"></i>
+  Systems
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Koa/" class="nav-link"><i class="undefined"></i>
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node.js/" class="nav-link"><i class="undefined"></i>
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Notes/" class="nav-link"><i class="undefined"></i>
+  Notes
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PowerShell/" class="nav-link"><i class="undefined"></i>
+  PowerShell
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/jon2180" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    行也成文
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>34</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>21</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/C/C++/" class="nav-link"><i class="undefined"></i>
+  C/C++
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Front End/" class="nav-link"><i class="undefined"></i>
+  Front End
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Interview/" class="nav-link"><i class="undefined"></i>
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/System/" class="nav-link"><i class="undefined"></i>
+  System
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Softwares/" class="nav-link"><i class="undefined"></i>
+  Softwares
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Culture/" class="nav-link"><i class="undefined"></i>
+  Culture
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Systems/" class="nav-link"><i class="undefined"></i>
+  Systems
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Koa/" class="nav-link"><i class="undefined"></i>
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node.js/" class="nav-link"><i class="undefined"></i>
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Notes/" class="nav-link"><i class="undefined"></i>
+  Notes
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PowerShell/" class="nav-link"><i class="undefined"></i>
+  PowerShell
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/jon2180" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>MySQL学习笔记</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>行也成文</span>
+            
+          <span data-v-4e82dffc>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">MySQL学习笔记</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>行也成文</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>5/30/2018</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>mysql</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="创建数据库和表"><a href="#创建数据库和表" class="header-anchor">#</a> 创建数据库和表</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token operator">-</span> 创建数据库
+<span class="token keyword">create</span> <span class="token keyword">database</span> <span class="token operator">&lt;</span>db<span class="token operator">-</span>name<span class="token operator">&gt;</span>
+
+<span class="token operator">-</span> 创建表
+<span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token operator">&lt;</span><span class="token keyword">table</span><span class="token operator">-</span>name<span class="token operator">&gt;</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span><span class="token operator">&lt;</span><span class="token keyword">column</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>name<span class="token operator">&gt;</span><span class="token punctuation">`</span> <span class="token operator">&lt;</span><span class="token keyword">data</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span><span class="token keyword">type</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span><span class="token operator">&lt;</span><span class="token keyword">column</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">-</span>name<span class="token operator">&gt;</span><span class="token punctuation">`</span> <span class="token operator">&lt;</span><span class="token keyword">data</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">-</span><span class="token keyword">type</span><span class="token operator">&gt;</span>
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="增删改查"><a href="#增删改查" class="header-anchor">#</a> 增删改查</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token operator">-</span> 增
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token operator">&lt;</span><span class="token keyword">table</span><span class="token operator">-</span>name<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">column</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token keyword">column</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+
+<span class="token operator">-</span> 删
+<span class="token keyword">delete</span> <span class="token keyword">from</span> <span class="token operator">&lt;</span><span class="token keyword">table</span><span class="token operator">-</span>name<span class="token operator">&gt;</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token operator">-</span> 改
+updata <span class="token operator">&lt;</span><span class="token keyword">table</span><span class="token operator">-</span>name<span class="token operator">&gt;</span> <span class="token keyword">set</span> <span class="token operator">&lt;</span><span class="token keyword">column</span><span class="token operator">-</span>name<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token operator">&lt;</span>new<span class="token operator">-</span><span class="token keyword">value</span><span class="token operator">&gt;</span>
+
+<span class="token operator">-</span> 查
+<span class="token keyword">select</span> <span class="token operator">&lt;</span><span class="token keyword">column</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> <span class="token operator">&lt;</span><span class="token keyword">table</span><span class="token operator">-</span>name<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">database</span> bsys
+
+<span class="token operator">-</span> 创建表Student
+<span class="token keyword">create</span> <span class="token keyword">table</span> Student <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span>sno<span class="token punctuation">`</span> <span class="token keyword">char</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>sname<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>ssex<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>sbirth<span class="token punctuation">`</span> <span class="token keyword">date</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>sdept<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token operator">-</span> 创建表 Book
+<span class="token keyword">create</span> <span class="token keyword">table</span> Book <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span>bno<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>bname<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>author<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>publish<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>price<span class="token punctuation">`</span> <span class="token keyword">float</span>
+<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">table</span> Student
+<span class="token punctuation">(</span>
+    sno <span class="token keyword">char</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    sname <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    ssex <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    sbirth <span class="token keyword">date</span><span class="token punctuation">,</span>
+    sdept <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> Book
+<span class="token punctuation">(</span>
+    bno <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    bname <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    author <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    publish <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    price <span class="token keyword">float</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> Br
+<span class="token punctuation">(</span>
+    sno <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    bno <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    bdate <span class="token keyword">date</span><span class="token punctuation">,</span>
+    rdate <span class="token keyword">date</span><span class="token punctuation">,</span>
+    fun <span class="token keyword">float</span>
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><ol start="3"><li>添加字段</li></ol> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">alter</span> <span class="token keyword">table</span> Book
+<span class="token keyword">add</span> <span class="token keyword">column</span> pdate <span class="token keyword">date</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="4"><li>增/删/改/查数据
+<ul><li>增</li></ul></li></ol> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">insert</span> <span class="token keyword">into</span> Student
+<span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">'1001'</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token string">'1998-7-12'</span><span class="token punctuation">,</span><span class="token string">'微电系'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token punctuation">(</span><span class="token string">'1002'</span><span class="token punctuation">,</span><span class="token string">'李四'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token string">'1999-5-4'</span><span class="token punctuation">,</span><span class="token string">'计算机系'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token punctuation">(</span><span class="token string">'1003'</span><span class="token punctuation">,</span><span class="token string">'王麻子'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token string">'1995-3-9'</span><span class="token punctuation">,</span><span class="token string">'微电系'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> Book
+<span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">'b01'</span><span class="token punctuation">,</span><span class="token string">'数据库'</span><span class="token punctuation">,</span><span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token string">'清华大学出版社'</span><span class="token punctuation">,</span><span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token string">'2001-9-15'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token punctuation">(</span><span class="token string">'b02'</span><span class="token punctuation">,</span><span class="token string">'c语言'</span><span class="token punctuation">,</span><span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token string">'人民邮电出版社'</span><span class="token punctuation">,</span><span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span><span class="token punctuation">)</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> Br
+<span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">'1002'</span><span class="token punctuation">,</span><span class="token string">'b01'</span><span class="token punctuation">,</span><span class="token string">'2006-11-5'</span><span class="token punctuation">,</span><span class="token string">'2006-11-20'</span><span class="token punctuation">,</span><span class="token string">'0'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>删</li></ul> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delete</span> <span class="token keyword">from</span> student
+<span class="token keyword">where</span> sdept<span class="token operator">=</span><span class="token string">'微电系'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol><li>调用函数</li></ol> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">insert</span> <span class="token keyword">into</span> Br
+datediff<span class="token punctuation">(</span>bdate<span class="token punctuation">,</span>rdate<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="例二"><a href="#例二" class="header-anchor">#</a> 例二</h2> <ol><li>第一部分</li></ol> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">/*创建数据库*/</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> student
+<span class="token punctuation">(</span>
+sno <span class="token keyword">char</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+sname <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ssex <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+sage <span class="token keyword">smallint</span><span class="token punctuation">,</span>
+sdept <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> sc
+<span class="token punctuation">(</span>
+    sno <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    cno <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    grade <span class="token keyword">float</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>sno<span class="token punctuation">,</span>cno<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">alter</span> <span class="token keyword">table</span> student
+<span class="token keyword">add</span> <span class="token keyword">column</span> zhuzi <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span> <span class="token comment">/*增加一列*/</span>
+
+<span class="token comment">/*插入数据*/</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student
+<span class="token keyword">values</span> <span class="token punctuation">(</span><span class="token string">'1001'</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token string">'行知'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student
+<span class="token keyword">values</span> 
+    <span class="token punctuation">(</span><span class="token string">'1001'</span><span class="token punctuation">,</span><span class="token string">'张军'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token string">'电气'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'1002'</span><span class="token punctuation">,</span><span class="token string">'李力'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token string">'计算机'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'1003'</span><span class="token punctuation">,</span><span class="token string">'张佳'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">,</span><span class="token string">'机械'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'1004'</span><span class="token punctuation">,</span><span class="token string">'宋丽琳'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token string">'电气'</span><span class="token punctuation">)</span>
+
+<span class="token comment">/*增 数据*/</span>
+<span class="token keyword">update</span> student<span class="token punctuation">,</span>sc
+<span class="token keyword">set</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token string">'1007'</span><span class="token punctuation">,</span>sc<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token string">'1008'</span>
+<span class="token keyword">where</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token string">'1001'</span><span class="token operator">and</span> sc<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*查 数据*/</span>
+<span class="token comment">/*临时添加一项出生年... '..' */</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span><span class="token punctuation">,</span> sname <span class="token string">'姓名'</span><span class="token punctuation">,</span> <span class="token number">2018</span><span class="token operator">-</span>sage <span class="token string">'出生年'</span>
+<span class="token keyword">from</span> student
+
+<span class="token comment">/*查询选了课的同学的学号(消除重复行)distinct*/</span>
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> sno
+<span class="token keyword">from</span> sc
+
+<span class="token comment">/*查询选了课的同学的学号(全部显示)*/</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span> cno
+<span class="token keyword">from</span> sc
+
+<span class="token comment">/*查询年龄大与19的学生的所有信息 &gt;*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sage<span class="token operator">&gt;</span><span class="token number">19</span>
+
+<span class="token comment">/*查询2000年后出生的学生 &gt;=*/</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname<span class="token punctuation">,</span><span class="token number">2018</span><span class="token operator">-</span>sage
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> <span class="token number">2018</span><span class="token operator">-</span>sage<span class="token operator">&gt;=</span><span class="token number">2000</span>
+
+<span class="token comment">/*查询年龄17到19之间的学生 between...and...*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sage <span class="token operator">between</span> <span class="token number">17</span> <span class="token operator">and</span> <span class="token number">19</span>
+
+<span class="token comment">/*查询经管和计算机的学生*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sdept <span class="token operator">in</span><span class="token punctuation">(</span><span class="token string">'计算机'</span><span class="token punctuation">,</span><span class="token string">'经管'</span><span class="token punctuation">)</span>
+
+<span class="token comment">/*查询姓张的同学的学号和姓名 % (任意长度)和 _ （固定长度）模糊查找*/</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sname <span class="token operator">like</span> <span class="token string">'张%'</span>
+
+<span class="token comment">/*查询计算机系和经管的女同学 and ，or*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ssex<span class="token operator">=</span><span class="token string">'女'</span> <span class="token operator">and</span> <span class="token punctuation">(</span>sdept <span class="token operator">=</span> <span class="token string">'计算机'</span> <span class="token operator">or</span> sdept<span class="token operator">=</span><span class="token string">'经管'</span><span class="token punctuation">)</span>
+
+<span class="token comment">/*统计学生总人数（其实是统计行数）*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> student
+
+<span class="token comment">/*统计男生人数*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ssex<span class="token operator">=</span><span class="token string">'男'</span>
+
+<span class="token comment">/*统计男生人数*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ssex<span class="token operator">=</span><span class="token string">'男'</span>
+
+<span class="token comment">/*统计选课人数*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">distinct</span> sno<span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> sc
+
+<span class="token comment">/*1001同学的最高分*/</span>
+<span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">as</span> 最高分
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*统计从c01这门课的总分*/</span>
+<span class="token keyword">select</span> <span class="token function">sum</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">as</span> 总分
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*统计从c01这门课的平均分*/</span>
+<span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">as</span> 平均分
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*统计男女各有多少人*/</span>
+<span class="token keyword">select</span> ssex <span class="token string">'性别'</span><span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> 
+<span class="token keyword">from</span> student
+<span class="token keyword">group</span> <span class="token keyword">by</span> ssex
+
+<span class="token comment">/*统计男女各有多少人*/</span>
+<span class="token keyword">select</span> sdept <span class="token string">'系'</span><span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> 
+<span class="token keyword">from</span> student
+<span class="token keyword">group</span> <span class="token keyword">by</span> sdept
+
+<span class="token comment">/*统计每个学生各选了多少门课*/</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span><span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span> 
+<span class="token keyword">from</span> sc
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+
+<span class="token comment">/*统计每个学生各选了多少门课*/</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">3</span>
+
+<span class="token comment">/*统计两门在90分以上的学生的学号*/</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> grade<span class="token operator">&gt;=</span><span class="token number">90</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+<span class="token comment">/*统计每个学生的选课门数，并按门数降序排序*/</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span> <span class="token keyword">desc</span>
+
+<span class="token comment">/*查询学生的选课情况*/</span>
+<span class="token keyword">select</span> sname<span class="token punctuation">,</span>cname<span class="token punctuation">,</span>grade
+<span class="token keyword">from</span> student<span class="token punctuation">,</span>course<span class="token punctuation">,</span>sc
+<span class="token keyword">where</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span>sc<span class="token punctuation">.</span>sno <span class="token operator">and</span>
+course<span class="token punctuation">.</span>cno <span class="token operator">=</span>sc<span class="token punctuation">.</span>cno
+
+<span class="token comment">/* 查询每门课程的间接先修课*/</span>
+<span class="token keyword">select</span> c1<span class="token punctuation">.</span>cno<span class="token punctuation">,</span>c2<span class="token punctuation">.</span>cpon
+<span class="token keyword">from</span> course c1<span class="token punctuation">,</span>course c2
+<span class="token keyword">where</span> c1<span class="token punctuation">.</span>cpon<span class="token operator">=</span>c2<span class="token punctuation">.</span>cno
+
+<span class="token comment">/*查询所有学生的选课门数 */</span>
+<span class="token keyword">select</span> student<span class="token punctuation">.</span>sno<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span>
+<span class="token keyword">from</span> student <span class="token keyword">left</span> <span class="token keyword">join</span> sc
+<span class="token keyword">on</span><span class="token punctuation">(</span>student<span class="token punctuation">.</span>sno<span class="token operator">=</span>sc<span class="token punctuation">.</span>sno<span class="token punctuation">)</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> student<span class="token punctuation">.</span>sno
+
+<span class="token keyword">select</span> cname<span class="token punctuation">,</span><span class="token function">max</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span>
+<span class="token keyword">from</span> course<span class="token punctuation">,</span>sc
+<span class="token keyword">where</span> course<span class="token punctuation">.</span>cno <span class="token operator">=</span> sc<span class="token punctuation">.</span>cno
+<span class="token keyword">group</span> <span class="token keyword">by</span> course<span class="token punctuation">.</span>cno
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">max</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">desc</span>
+
+<span class="token comment">/*step1:查询张军在哪个系*/</span>
+<span class="token comment">/*
+select sdept
+from student
+where sname='张'
+*/</span>
+
+<span class="token comment">/*step2:查询电气的学生*/</span>
+<span class="token comment">/*
+select *
+from student
+where sdept='电气' and sname!='张君'
+*/</span>
+<span class="token comment">/*step3:合并*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sdept <span class="token operator">=</span><span class="token punctuation">(</span>
+    <span class="token keyword">select</span> sdept
+    <span class="token keyword">from</span> student
+    <span class="token keyword">where</span> sname<span class="token operator">=</span><span class="token string">'张军'</span><span class="token punctuation">)</span>
+    <span class="token operator">and</span> sname<span class="token operator">!=</span><span class="token string">'张军'</span>
+
+
+<span class="token comment">/*查询选修了数据库这门课的学生的学号和姓名*/</span>
+<span class="token comment">/*1.多表方式*/</span>
+<span class="token keyword">select</span> sc<span class="token punctuation">.</span>sno<span class="token punctuation">,</span>sname
+<span class="token keyword">from</span> student<span class="token punctuation">,</span>course<span class="token punctuation">,</span>sc
+<span class="token keyword">where</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span>sc<span class="token punctuation">.</span>sno <span class="token operator">and</span> course<span class="token punctuation">.</span>cno<span class="token operator">=</span>sc<span class="token punctuation">.</span>cno <span class="token operator">and</span> cname<span class="token operator">=</span><span class="token string">'数据库'</span>
+
+<span class="token comment">/*2.嵌套查询*/</span>
+<span class="token keyword">select</span> cno 
+<span class="token keyword">from</span> course
+<span class="token keyword">where</span> cname<span class="token operator">=</span><span class="token string">'数据库'</span>
+<span class="token comment">/*step2:查询选修了c01的学生的学号*/</span>
+<span class="token keyword">select</span> sno
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> cno<span class="token operator">=</span><span class="token string">'c01'</span>
+<span class="token comment">/*step3:查询1001，1003的学号和姓名*/</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sno <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token string">'1001'</span><span class="token punctuation">,</span><span class="token string">'1003'</span><span class="token punctuation">)</span>
+<span class="token comment">/*step4:合并 */</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sno <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> sno
+    <span class="token keyword">from</span> sc
+    <span class="token keyword">where</span> cno<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> cno 
+        <span class="token keyword">from</span> course
+        <span class="token keyword">where</span> cname<span class="token operator">=</span><span class="token string">'数据库'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">/*step4:合并 */</span>
+<span class="token keyword">select</span> student<span class="token punctuation">.</span>sno<span class="token punctuation">,</span>sname
+<span class="token keyword">from</span> student<span class="token punctuation">,</span>sc
+<span class="token keyword">where</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span>sc<span class="token punctuation">.</span>sno <span class="token operator">and</span> cno<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> cno 
+            <span class="token keyword">from</span> course
+            <span class="token keyword">where</span> cname<span class="token operator">=</span><span class="token string">'数据库'</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">/*查询每个学生成绩超过他自己平均分的课程号和课程名*/</span>
+<span class="token comment">/*
+ * step1:查询sc表的第一个学生1001的平均分
+ * step2:查询sc表1001超过89分的课程号
+ * step3:重复step1，step2
+ */</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br></div></div><ol start="2"><li>第二部分</li></ol> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- //嵌套第5题</span>
+<span class="token keyword">select</span> sdept
+<span class="token keyword">from</span> student <span class="token keyword">left</span> <span class="token keyword">join</span> br <span class="token keyword">on</span> <span class="token punctuation">(</span>student<span class="token punctuation">.</span>sno<span class="token operator">=</span>br<span class="token punctuation">.</span>sno<span class="token punctuation">)</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> sdept
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>student<span class="token punctuation">.</span>sno<span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">2</span>
+
+<span class="token comment">-- //exists第3题</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> br<span class="token punctuation">,</span>book<span class="token punctuation">,</span>student
+<span class="token keyword">where</span> br<span class="token punctuation">.</span>bno<span class="token operator">=</span>book<span class="token punctuation">.</span>bno <span class="token operator">and</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span>br<span class="token punctuation">.</span>sno
+<span class="token operator">and</span> bname<span class="token operator">=</span><span class="token string">'数据库原理'</span>  <span class="token operator">and</span>
+<span class="token operator">not</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span>
+    <span class="token keyword">select</span> <span class="token operator">*</span>
+        <span class="token keyword">from</span> br<span class="token punctuation">,</span>book
+        <span class="token keyword">where</span> br<span class="token punctuation">.</span>bno<span class="token operator">=</span>book<span class="token punctuation">.</span>bno <span class="token operator">and</span> bname<span class="token operator">=</span><span class="token string">'C语言'</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">-- //exist第8题</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">from</span> a <span class="token keyword">where</span> <span class="token keyword">no</span><span class="token operator">=</span><span class="token string">'&quot;.$no.&quot;'</span> <span class="token operator">and</span> pd<span class="token operator">=</span><span class="token string">'&quot;.$mm.&quot;'</span>&quot;
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">from</span> a <span class="token keyword">where</span> <span class="token keyword">no</span><span class="token operator">=</span><span class="token string">'1'</span> <span class="token operator">and</span> pd<span class="token operator">=</span><span class="token string">'aa'</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> <span class="token keyword">from</span> book<span class="token punctuation">,</span>br
+<span class="token keyword">where</span> book<span class="token punctuation">.</span>booknumber<span class="token operator">=</span>br<span class="token punctuation">.</span>bno <span class="token operator">and</span> bno<span class="token operator">=</span><span class="token string">'b01'</span>
+
+<span class="token comment">/*临时添加一项出生年*/</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span><span class="token punctuation">,</span> sname <span class="token string">'姓名'</span><span class="token punctuation">,</span> <span class="token number">2018</span><span class="token operator">-</span>sage <span class="token string">'出生年'</span>
+<span class="token keyword">from</span> student
+
+<span class="token comment">/*查询选了课的同学的学号(消除重复行) distinct*/</span>
+
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> sno
+<span class="token keyword">from</span> sc
+
+<span class="token comment">/*查询选了课的同学的学号(全部显示)*/</span>
+
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span> cno
+<span class="token keyword">from</span> sc
+
+
+<span class="token comment">/*查询年龄大与19的学生的所有信息*/</span>
+
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sage<span class="token operator">&gt;</span><span class="token number">19</span>
+
+
+<span class="token comment">/*查询2000年后出生的学生 */</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname<span class="token punctuation">,</span><span class="token number">2018</span><span class="token operator">-</span>sage
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> <span class="token number">2018</span><span class="token operator">-</span>sage<span class="token operator">&gt;=</span><span class="token number">2000</span>
+
+
+<span class="token comment">/*查询年龄17到19之间的学生 between...and...*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sage <span class="token operator">between</span> <span class="token number">17</span> <span class="token operator">and</span> <span class="token number">19</span>
+
+<span class="token comment">/*查询经管和计算机的学生*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sdept <span class="token operator">in</span><span class="token punctuation">(</span><span class="token string">'计算机'</span><span class="token punctuation">,</span><span class="token string">'经管'</span><span class="token punctuation">)</span>
+
+<span class="token comment">/*查询姓张的同学的学号和姓名 % (任意长度)和_（固定长度）模糊查找*/</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sname <span class="token operator">like</span> <span class="token string">'张%'</span>
+
+<span class="token comment">/*查询计算机系和经管的女同学 and ，or*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ssex<span class="token operator">=</span><span class="token string">'女'</span> <span class="token operator">and</span> <span class="token punctuation">(</span>sdept <span class="token operator">=</span> <span class="token string">'计算机'</span> <span class="token operator">or</span> sdept<span class="token operator">=</span><span class="token string">'经管'</span><span class="token punctuation">)</span>
+
+<span class="token comment">/*统计学生总人数（其实是统计行数）*/</span>
+
+selectcount<span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> student
+
+<span class="token comment">/*统计男生人数*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ssex<span class="token operator">=</span><span class="token string">'男'</span>
+
+<span class="token comment">/*统计男生人数*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ssex<span class="token operator">=</span><span class="token string">'男'</span>
+
+<span class="token comment">/*统计选课人数*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">distinct</span> sno<span class="token punctuation">)</span> <span class="token keyword">as</span> 人数
+<span class="token keyword">from</span> sc
+
+<span class="token comment">/*1001同学的最高分*/</span>
+<span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">as</span> 最高分
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*统计从c01这门课的总分*/</span>
+<span class="token keyword">select</span> <span class="token function">sum</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">as</span> 总分
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*统计从c01这门课的平均分*/</span>
+<span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">as</span> 平均分
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1001'</span>
+
+<span class="token comment">/*统计男女各有多少人*/</span>
+<span class="token keyword">select</span> ssex <span class="token string">'性别'</span><span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">group</span> <span class="token keyword">by</span> ssex
+
+<span class="token comment">/*统计男/女各有多少人*/</span>
+<span class="token keyword">select</span> sdept <span class="token string">'系'</span><span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span>
+<span class="token keyword">from</span> student
+<span class="token keyword">group</span> <span class="token keyword">by</span> sdept
+
+<span class="token comment">/*统计每个学生各选了多少门课*/</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span><span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+
+<span class="token comment">/*统计每个学生各选了多少门课*/</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">3</span>
+
+<span class="token operator">*</span>统计两门在<span class="token number">90</span>分以上的学生的学号<span class="token operator">*</span>
+<span class="token keyword">select</span> sno <span class="token string">'学号'</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">where</span> grade<span class="token operator">&gt;=</span><span class="token number">90</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+<span class="token operator">*</span>统计每个学生的选课门数，并按门数降序排序<span class="token operator">*</span>
+<span class="token keyword">select</span> sno<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span>
+<span class="token keyword">from</span> sc
+<span class="token keyword">group</span> <span class="token keyword">by</span> sno
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">count</span><span class="token punctuation">(</span>cno<span class="token punctuation">)</span> <span class="token keyword">desc</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br></div></div><hr> <p>## Last Updated:04/04/2018
+<em>查询学生的选课情况</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sname,cname,grade
+from student,course,sc
+where student.sno=sc.sno and
+course.cno =sc.cno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><em>查询每门课程的间接先修课</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select c1.cno,c2.cpon
+from course c1,course c2
+where c1.cpon=c2.cno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询所有学生的选课门数</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select student.sno,count(cno)
+from student left join sc
+on(student.sno=sc.sno)
+group by student.sno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><hr> <p>## Last updated：2018-04-11
+<em>查询与张军在同一系的学生的信息</em></p> <blockquote><p>step1:查询张军在哪个系</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sdept
+from student
+where sname='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step2:查询电气的学生</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sdept='电气' and sname!='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step3:合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sdept =(
+     select sdept
+     from student
+     where sname='张军'
+     )  and sname!='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><em>查询选修了数据库这门课的学生的学号和姓名</em></p> <blockquote><p>1.多表方式</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sc.sno,sname
+from student,course,sc
+where student.sno=sc.sno and course.cno=sc.cno and cname='数据库'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>2.嵌套查询</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select cno
+from course
+where cname='数据库'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step2:查询选修了c01的学生的学号</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno
+from sc
+where cno='c01'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step3:查询1001，1003的学号和姓名</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,sname
+from student
+where sno in ('1001','1003')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step4:合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,sname
+from student
+where sno in (select sno
+ from sc
+ where cno=(select cno
+  from course
+  where cname='数据库')
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><blockquote><p>step4:合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select student.sno,sname
+from student,sc
+where student.sno=sc.sno and cno=(select cno
+   from course
+   where cname='数据库'
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><em>查询每个学生成绩超过他自己平均分的课程号和课程名</em></p> <blockquote><p>step1:查询sc表的第一个学生1001的平均分
+step2:查询sc表1001超过89分的课程号
+step3:重复step1，step2</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,cno
+from sc sc1
+where grade=(
+    select avg(grade)
+    from sc sc2
+    where sc2.sno=sc1.sno
+ )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><em>查询选修门数超过张佳佳的选修门数的学生的学号</em></p> <blockquote><p>step1：查询张佳佳选了几门
+step2：查询超过两门的学生的学号
+step3：合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sc.sno,count(cno)
+from sc,student
+where sc.sno=student.sno and sname!='张佳佳'
+group by sno
+having count(cno)&gt;=(
+        select count(cno)
+        from student,sc
+        where student.sno=sc.sno and sname = '张佳佳'
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><hr> <p>## Updated:2018-4-18  exists查询
+<em>查询选修了c01课程的学生的姓名</em></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">/*多表*/</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> student<span class="token punctuation">,</span>sc
+<span class="token keyword">where</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span>sc<span class="token punctuation">.</span>sno <span class="token operator">and</span> cno<span class="token operator">=</span><span class="token string">'c01'</span>
+<span class="token comment">/*嵌套*/</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sno <span class="token operator">in</span><span class="token punctuation">(</span>
+        <span class="token keyword">select</span> sno
+        <span class="token keyword">from</span> sc
+        <span class="token keyword">where</span> cno<span class="token operator">=</span><span class="token string">'c01'</span>
+<span class="token punctuation">)</span>
+<span class="token comment">/*exists嵌套*/</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span>
+        <span class="token keyword">select</span> <span class="token operator">*</span>
+        <span class="token keyword">from</span> sc
+        <span class="token keyword">where</span> cno<span class="token operator">=</span><span class="token string">'c01'</span> <span class="token operator">and</span> sc<span class="token punctuation">.</span>sno<span class="token operator">=</span>student<span class="token punctuation">.</span>sno
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>查询选修了全部课程的学生的姓名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/*多表连接查询*/
+select student.sno,sname
+from student,sc
+where sc.sno=student.sno
+group by sname
+having count(sc.cno)=(
+ select count(cno)
+        from course
+        )
+/*not exists*/
+select sname
+from student
+where not exists (
+        select *
+        from course
+        where not exists (
+            select *
+            from sc
+            where sc.cno=course.cno and
+            sc.sno=student.sno
+             )
+        )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>查询选修了1003同学选修的全部课程的学生的学号和姓名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,count(cno)
+from sc
+where cno in(
+        select cno
+        from sc
+        where sno='1003' and sno!='1003'
+        )
+group by sno
+having count(cno)=(
+        select count(cno)
+        from sc
+        where sno='1001'
+        )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>查询不存在这样的课程，学生s1选修了，而学生xxx没有选修</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">distinct</span> sno
+<span class="token keyword">from</span> sc s1
+<span class="token keyword">where</span> <span class="token operator">not</span> <span class="token keyword">exists</span><span class="token punctuation">(</span>
+        <span class="token keyword">select</span> <span class="token operator">*</span>
+        <span class="token keyword">from</span> sc s2
+        <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1003'</span> <span class="token operator">and</span> <span class="token operator">not</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span>
+                <span class="token keyword">select</span> <span class="token operator">*</span>
+                <span class="token keyword">from</span> sc s3
+                <span class="token keyword">where</span> s3<span class="token punctuation">.</span>cno<span class="token operator">=</span>s2<span class="token punctuation">.</span>cno <span class="token operator">and</span>
+                s3<span class="token punctuation">.</span>sno<span class="token operator">=</span>s1<span class="token punctuation">.</span>sno <span class="token operator">and</span>
+                sno<span class="token operator">!=</span><span class="token string">'1003'</span>
+                <span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>课后作业1：查询没有选修c03课程的学生学号</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno
+from student
+where not exists (
+        select *
+        from sc
+        where cno='c03' and sc.sno=student.sno
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>课后作业2：查询学号1001学生没有选修的科目</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <p>## Updated：2018-04-25 视图
+1.创建视图用于查询学生的选课情况，包括姓名，课程名和成绩</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create view v1
+as
+select sname,cname,grade
+from student,sc,course
+where student.sno=sc.sno and
+course.cno=sc.cno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><em>视图已创建</em></p> <p>查询学生的选课情况</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from v1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>查询张军同学的选课情况</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from v1
+where sname='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>2.创建视图用于统计学生的选课门数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create view v2(no,shu)
+as
+select student.sno,count(cno)
+from student left join sc on (student.sno=sc.sno)
+group by student.sno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from v2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>3.删除视图</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>drop view v2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>4.创建一个视图用于查询计算机系的学生信息，学号，姓名，性别，系别</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create view v6
+as
+select cno,cname,ccredit,chour
+from course
+where chour=48
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>插入数据--</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>insert into v6
+values('c40','英语',3,48)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>插入不适合数据--成功，编译器不会检测输入</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">insert</span> <span class="token keyword">into</span> v6
+<span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">'c40'</span><span class="token punctuation">,</span><span class="token string">'英语'</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">48</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>加入使用增删改时的检测，使编译器检测输入</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">view</span> v6
+<span class="token keyword">as</span>
+<span class="token keyword">select</span> cno<span class="token punctuation">,</span>cname<span class="token punctuation">,</span>ccredit<span class="token punctuation">,</span>chour
+<span class="token keyword">from</span> course
+<span class="token keyword">where</span> chour<span class="token operator">=</span><span class="token number">48</span>
+<span class="token keyword">with</span> <span class="token keyword">check</span> <span class="token keyword">option</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>创建存储过程p1，输入学号和课程号，显示成绩</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> $$
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> p1<span class="token punctuation">(</span><span class="token operator">in</span> xh <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">in</span> ch <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">out</span> cj <span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+    cj<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> grade <span class="token keyword">from</span> sc <span class="token keyword">where</span> sno<span class="token operator">=</span>xh <span class="token operator">and</span> cno<span class="token operator">=</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> $$
+<span class="token keyword">delimiter</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>创建一个存储过程，用于删除指定的学生</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> p2<span class="token punctuation">(</span><span class="token operator">in</span> xm <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">delete</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> sname<span class="token operator">=</span>xm<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token comment">//</span>
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>创建存储过程p1，输入学号和课程号，显示等级</p> <p>1.delimiter的语法：前面定义一个符号，后面也用这个符号收回
+后面的delimiter要有&lt; space &gt; + ';'</p> <p>2.elseif连写</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> $$
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> p1<span class="token punctuation">(</span><span class="token operator">in</span> xh <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">in</span> ch <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">out</span> dj <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">declare</span> cj <span class="token keyword">float</span><span class="token punctuation">;</span>
+    <span class="token keyword">set</span> cj<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> grade <span class="token keyword">from</span> sc <span class="token keyword">where</span> sno<span class="token operator">=</span>xh <span class="token operator">and</span> cno<span class="token operator">=</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> cj<span class="token operator">&gt;=</span><span class="token number">90</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'优'</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> cj<span class="token operator">&gt;=</span><span class="token number">80</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'良'</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> cj<span class="token operator">&gt;=</span><span class="token number">70</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'中'</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> cj<span class="token operator">&gt;=</span><span class="token number">60</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'及格'</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'不及格'</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+$$
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>delimiter调用</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">call</span> p1<span class="token punctuation">(</span><span class="token string">'1001'</span><span class="token punctuation">,</span><span class="token string">'c01'</span><span class="token punctuation">,</span><span class="token variable">@k</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token variable">@k</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>## Update:2018-05-02 函数</p> <p>1.函数 function
+2.存储过程 procedure
+创建一个函数用于统计某门课程的选修人数</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">function</span> f1<span class="token punctuation">(</span>ch <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">returns</span> <span class="token keyword">int</span>
+<span class="token comment">/*对比：create procedure p1(in ch char(10),out shu int)*/</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">declare</span> shu <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token comment">/*compare：set shu=(select count(cno) from sc where cno=ch)*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> <span class="token keyword">into</span> shu <span class="token keyword">from</span> sc <span class="token keyword">where</span> cno<span class="token operator">=</span>ch<span class="token punctuation">;</span>
+<span class="token keyword">return</span> shu<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token comment">//</span>
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>函数调用</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> f1<span class="token punctuation">(</span><span class="token string">'c01'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>讨论：存储过程与函数的异同
+have take a photo;</p> <p># update:2018--05-07
+每当学生选修一门课，该课程人数自动加1</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">trigger</span> tr1 before <span class="token keyword">update</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>当更新sc表成绩小于60分时，自动将其成绩改为60
+当update sc表时，自动grade=60</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">trigger</span> tr2 before <span class="token keyword">update</span>
+<span class="token keyword">on</span> sc <span class="token keyword">for</span> each <span class="token keyword">row</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">if</span> new<span class="token punctuation">.</span>grade<span class="token operator">&lt;</span><span class="token number">60</span> <span class="token keyword">then</span>
+    <span class="token keyword">set</span> new<span class="token punctuation">.</span>grade<span class="token operator">=</span><span class="token number">60</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>当学生选课时，自动检测其学号和课程号是否存在，如果有一个不存在，则显示您的学号或课程号不存在，不能选课
+<strong>signal sqlstate 'HY000' set message_text=msg; 抛出错误</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">trigger</span> tr3 before <span class="token keyword">insert</span>
+<span class="token keyword">on</span> sc <span class="token keyword">for</span> each <span class="token keyword">row</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">declare</span> sshu <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> cshu <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> msg <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">into</span> sshu <span class="token keyword">from</span> student <span class="token keyword">where</span> sno<span class="token operator">=</span>new<span class="token punctuation">.</span>sno<span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">into</span> cshu <span class="token keyword">from</span> course <span class="token keyword">where</span> cno<span class="token operator">=</span>new<span class="token punctuation">.</span>cno<span class="token punctuation">;</span>
+<span class="token keyword">if</span> sshu<span class="token operator">=</span><span class="token number">0</span> <span class="token operator">or</span> cshu<span class="token operator">=</span><span class="token number">0</span> <span class="token keyword">then</span>
+    <span class="token keyword">set</span> msg<span class="token operator">=</span><span class="token string">&quot;你的学号或课程号不存在，不能选课&quot;</span>；
+    signal sqlstate <span class="token string">'HY000'</span> <span class="token keyword">set</span> message_text<span class="token operator">=</span>msg<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token comment">//</span>
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p><em>临时添加一项出生年</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno '学号', sname '姓名', 2018-sage '出生年'
+from student
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><em>查询选了课的同学的学号(消除重复行)  distinct</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select distinct sno
+from sc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><em>查询选了课的同学的学号(全部显示)</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno, cno
+from sc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><em>查询年龄大与19的学生的所有信息 &gt;</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sage&gt;19
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询2000年后出生的学生 &gt;=</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,sname,2018-sage
+from student
+where 2018-sage&gt;=2000
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询年龄17到19之间的学生 between...and...</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sage between 17 and 19
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询经管和计算机的学生</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sdept in('计算机','经管')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询姓张的同学的学号和姓名 % (任意长度)和 _ （固定长度）模糊查找</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,sname
+from student
+where sname like '张%'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询计算机系和经管的女同学 and ，or</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where ssex='女' and (sdept = '计算机' or sdept='经管')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>order by</em></p> <hr> <p>## Last Updated：03/28/2018</p> <p><em>统计学生总人数（其实是统计行数）</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select count(*) as 人数
+from student
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><em>统计男生人数</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select count(*) as 人数
+from student
+where ssex='男'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计男生人数</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select count(sno) as 人数
+from student
+where ssex='男'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计选课人数</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select count(distinct sno) as 人数
+from sc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><em>1001同学的最高分</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select max(grade) as 最高分
+from sc
+where sno='1001'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计从c01这门课的总分</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sum(grade) as 总分
+from sc
+where sno='1001'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计从c01这门课的平均分</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select avg(grade) as 平均分
+from sc
+where sno='1001'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计男女各有多少人</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select ssex '性别',count(sno)
+from student
+group by ssex
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计男女各有多少人</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sdept '系',count(sno)
+from student
+group by sdept
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计每个学生各选了多少门课</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno '学号',count(cno)
+from sc
+group by sno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>统计每个学生各选了多少门课</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno '学号'
+from sc
+group by sno
+having count(cno)&gt;3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><em>统计两门在90分以上的学生的学号</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno '学号'
+from sc
+where grade&gt;=90
+group by sno
+having count(cno)&gt;2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><em>统计每个学生的选课门数，并按门数降序排序</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,count(cno)
+from sc
+group by sno
+order by count(cno) desc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><hr> <p>## Last Updated:04/04/2018
+<em>查询学生的选课情况</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sname,cname,grade
+from student,course,sc
+where student.sno=sc.sno and
+course.cno =sc.cno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><em>查询每门课程的间接先修课</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select c1.cno,c2.cpon
+from course c1,course c2
+where c1.cpon=c2.cno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em>查询所有学生的选课门数</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select student.sno,count(cno)
+from student left join sc
+on(student.sno=sc.sno)
+group by student.sno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><hr> <p>## Last updated：2018-04-11
+<em>查询与张军在同一系的学生的信息</em></p> <blockquote><p>step1:查询张军在哪个系</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sdept
+from student
+where sname='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step2:查询电气的学生</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sdept='电气' and sname!='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step3:合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from student
+where sdept =(
+     select sdept
+     from student
+     where sname='张军'
+     )  and sname!='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><em>查询选修了数据库这门课的学生的学号和姓名</em></p> <blockquote><p>1.多表方式</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sc.sno,sname
+from student,course,sc
+where student.sno=sc.sno and course.cno=sc.cno and cname='数据库'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>2.嵌套查询</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select cno
+from course
+where cname='数据库'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step2:查询选修了c01的学生的学号</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno
+from sc
+where cno='c01'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step3:查询1001，1003的学号和姓名</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,sname
+from student
+where sno in ('1001','1003')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>step4:合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,sname
+from student
+where sno in (select sno
+ from sc
+ where cno=(select cno
+  from course
+  where cname='数据库')
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><blockquote><p>step4:合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select student.sno,sname
+from student,sc
+where student.sno=sc.sno and cno=(select cno
+   from course
+   where cname='数据库'
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><em>查询每个学生成绩超过他自己平均分的课程号和课程名</em></p> <blockquote><p>step1:查询sc表的第一个学生1001的平均分
+step2:查询sc表1001超过89分的课程号
+step3:重复step1，step2</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,cno
+from sc sc1
+where grade=(
+    select avg(grade)
+    from sc sc2
+    where sc2.sno=sc1.sno
+ )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><em>查询选修门数超过张佳佳的选修门数的学生的学号</em></p> <blockquote><p>step1：查询张佳佳选了几门
+step2：查询超过两门的学生的学号
+step3：合并</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sc.sno,count(cno)
+from sc,student
+where sc.sno=student.sno and sname!='张佳佳'
+group by sno
+having count(cno)&gt;=(
+        select count(cno)
+        from student,sc
+        where student.sno=sc.sno and sname = '张佳佳'
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><hr> <p>## Updated:2018-4-18  exists查询
+<em>查询选修了c01课程的学生的姓名</em></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">/*多表*/</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> student<span class="token punctuation">,</span>sc
+<span class="token keyword">where</span> student<span class="token punctuation">.</span>sno<span class="token operator">=</span>sc<span class="token punctuation">.</span>sno <span class="token operator">and</span> cno<span class="token operator">=</span><span class="token string">'c01'</span>
+<span class="token comment">/*嵌套*/</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> sno <span class="token operator">in</span><span class="token punctuation">(</span>
+        <span class="token keyword">select</span> sno
+        <span class="token keyword">from</span> sc
+        <span class="token keyword">where</span> cno<span class="token operator">=</span><span class="token string">'c01'</span>
+<span class="token punctuation">)</span>
+<span class="token comment">/*exists嵌套*/</span>
+<span class="token keyword">select</span> sname
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span>
+        <span class="token keyword">select</span> <span class="token operator">*</span>
+        <span class="token keyword">from</span> sc
+        <span class="token keyword">where</span> cno<span class="token operator">=</span><span class="token string">'c01'</span> <span class="token operator">and</span> sc<span class="token punctuation">.</span>sno<span class="token operator">=</span>student<span class="token punctuation">.</span>sno
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>查询选修了全部课程的学生的姓名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/*多表连接查询*/
+select student.sno,sname
+from student,sc
+where sc.sno=student.sno
+group by sname
+having count(sc.cno)=(
+ select count(cno)
+        from course
+        )
+/*not exists*/
+select sname
+from student
+where not exists (
+        select *
+        from course
+        where not exists (
+            select *
+            from sc
+            where sc.cno=course.cno and
+            sc.sno=student.sno
+             )
+        )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>查询选修了1003同学选修的全部课程的学生的学号和姓名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno,count(cno)
+from sc
+where cno in(
+        select cno
+        from sc
+        where sno='1003' and sno!='1003'
+        )
+group by sno
+having count(cno)=(
+        select count(cno)
+        from sc
+        where sno='1001'
+        )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>查询不存在这样的课程，学生s1选修了，而学生xxx没有选修</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">distinct</span> sno
+<span class="token keyword">from</span> sc s1
+<span class="token keyword">where</span> <span class="token operator">not</span> <span class="token keyword">exists</span><span class="token punctuation">(</span>
+        <span class="token keyword">select</span> <span class="token operator">*</span>
+        <span class="token keyword">from</span> sc s2
+        <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'1003'</span> <span class="token operator">and</span> <span class="token operator">not</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span>
+                <span class="token keyword">select</span> <span class="token operator">*</span>
+                <span class="token keyword">from</span> sc s3
+                <span class="token keyword">where</span> s3<span class="token punctuation">.</span>cno<span class="token operator">=</span>s2<span class="token punctuation">.</span>cno <span class="token operator">and</span>
+                s3<span class="token punctuation">.</span>sno<span class="token operator">=</span>s1<span class="token punctuation">.</span>sno <span class="token operator">and</span>
+                sno<span class="token operator">!=</span><span class="token string">'1003'</span>
+                <span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>课后作业1：查询没有选修c03课程的学生学号</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select sno
+from student
+where not exists (
+        select *
+        from sc
+        where cno='c03' and sc.sno=student.sno
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>课后作业2：查询学号1001学生没有选修的科目</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <p>## Updated：2018-04-25 视图
+1.创建视图用于查询学生的选课情况，包括姓名，课程名和成绩</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create view v1
+as
+select sname,cname,grade
+from student,sc,course
+where student.sno=sc.sno and
+course.cno=sc.cno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><em>视图已创建</em></p> <p>查询学生的选课情况</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from v1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>查询张军同学的选课情况</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from v1
+where sname='张军'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>2.创建视图用于统计学生的选课门数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create view v2(no,shu)
+as
+select student.sno,count(cno)
+from student left join sc on (student.sno=sc.sno)
+group by student.sno
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>select *
+from v2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>3.删除视图</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>drop view v2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>4.创建一个视图用于查询计算机系的学生信息，学号，姓名，性别，系别</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>create view v6
+as
+select cno,cname,ccredit,chour
+from course
+where chour=48
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>插入数据--</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>insert into v6
+values('c40','英语',3,48)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>插入不适合数据--成功，编译器不会检测输入</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">insert</span> <span class="token keyword">into</span> v6
+<span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">'c40'</span><span class="token punctuation">,</span><span class="token string">'英语'</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">48</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>加入使用增删改时的检测，使编译器检测输入</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">view</span> v6
+<span class="token keyword">as</span>
+<span class="token keyword">select</span> cno<span class="token punctuation">,</span>cname<span class="token punctuation">,</span>ccredit<span class="token punctuation">,</span>chour
+<span class="token keyword">from</span> course
+<span class="token keyword">where</span> chour<span class="token operator">=</span><span class="token number">48</span>
+<span class="token keyword">with</span> <span class="token keyword">check</span> <span class="token keyword">option</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>创建存储过程p1，输入学号和课程号，显示成绩</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> $$
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> p1<span class="token punctuation">(</span><span class="token operator">in</span> xh <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">in</span> ch <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">out</span> cj <span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+    cj<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> grade <span class="token keyword">from</span> sc <span class="token keyword">where</span> sno<span class="token operator">=</span>xh <span class="token operator">and</span> cno<span class="token operator">=</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> $$
+<span class="token keyword">delimiter</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>创建一个存储过程，用于删除指定的学生</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> p2<span class="token punctuation">(</span><span class="token operator">in</span> xm <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">delete</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> sname<span class="token operator">=</span>xm<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token comment">//</span>
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>创建存储过程p1，输入学号和课程号，显示等级</p> <p>1.delimiter的语法：前面定义一个符号，后面也用这个符号收回
+后面的delimiter要有&lt; space &gt; + ';'</p> <p>2.elseif连写</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> $$
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> p1<span class="token punctuation">(</span><span class="token operator">in</span> xh <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">in</span> ch <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">out</span> dj <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">declare</span> cj <span class="token keyword">float</span><span class="token punctuation">;</span>
+    <span class="token keyword">set</span> cj<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> grade <span class="token keyword">from</span> sc <span class="token keyword">where</span> sno<span class="token operator">=</span>xh <span class="token operator">and</span> cno<span class="token operator">=</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> cj<span class="token operator">&gt;=</span><span class="token number">90</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'优'</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> cj<span class="token operator">&gt;=</span><span class="token number">80</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'良'</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> cj<span class="token operator">&gt;=</span><span class="token number">70</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'中'</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> cj<span class="token operator">&gt;=</span><span class="token number">60</span> <span class="token keyword">then</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'及格'</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token keyword">set</span> dj<span class="token operator">=</span><span class="token string">'不及格'</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+$$
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>delimiter调用</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">call</span> p1<span class="token punctuation">(</span><span class="token string">'1001'</span><span class="token punctuation">,</span><span class="token string">'c01'</span><span class="token punctuation">,</span><span class="token variable">@k</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token variable">@k</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>## Update:2018-05-02 函数</p> <p>1.函数 function
+2.存储过程 procedure
+创建一个函数用于统计某门课程的选修人数</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">function</span> f1<span class="token punctuation">(</span>ch <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">returns</span> <span class="token keyword">int</span>
+<span class="token comment">/*对比：create procedure p1(in ch char(10),out shu int)*/</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">declare</span> shu <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token comment">/*compare：set shu=(select count(cno) from sc where cno=ch)*/</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span> <span class="token keyword">into</span> shu <span class="token keyword">from</span> sc <span class="token keyword">where</span> cno<span class="token operator">=</span>ch<span class="token punctuation">;</span>
+<span class="token keyword">return</span> shu<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token comment">//</span>
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>函数调用</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> f1<span class="token punctuation">(</span><span class="token string">'c01'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>讨论：存储过程与函数的异同
+have take a photo;</p> <p># update:2018--05-07
+每当学生选修一门课，该课程人数自动加1</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">trigger</span> tr1 before <span class="token keyword">update</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>当更新sc表成绩小于60分时，自动将其成绩改为60
+当update sc表时，自动grade=60</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">trigger</span> tr2 before <span class="token keyword">update</span>
+<span class="token keyword">on</span> sc <span class="token keyword">for</span> each <span class="token keyword">row</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">if</span> new<span class="token punctuation">.</span>grade<span class="token operator">&lt;</span><span class="token number">60</span> <span class="token keyword">then</span>
+    <span class="token keyword">set</span> new<span class="token punctuation">.</span>grade<span class="token operator">=</span><span class="token number">60</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>当学生选课时，自动检测其学号和课程号是否存在，如果有一个不存在，则显示您的学号或课程号不存在，不能选课
+<strong>signal sqlstate 'HY000' set message_text=msg; 抛出错误</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">delimiter</span> <span class="token comment">//</span>
+<span class="token keyword">create</span> <span class="token keyword">trigger</span> tr3 before <span class="token keyword">insert</span>
+<span class="token keyword">on</span> sc <span class="token keyword">for</span> each <span class="token keyword">row</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">declare</span> sshu <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> cshu <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> msg <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">into</span> sshu <span class="token keyword">from</span> student <span class="token keyword">where</span> sno<span class="token operator">=</span>new<span class="token punctuation">.</span>sno<span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">into</span> cshu <span class="token keyword">from</span> course <span class="token keyword">where</span> cno<span class="token operator">=</span>new<span class="token punctuation">.</span>cno<span class="token punctuation">;</span>
+<span class="token keyword">if</span> sshu<span class="token operator">=</span><span class="token number">0</span> <span class="token operator">or</span> cshu<span class="token operator">=</span><span class="token number">0</span> <span class="token keyword">then</span>
+    <span class="token keyword">set</span> msg<span class="token operator">=</span><span class="token string">&quot;你的学号或课程号不存在，不能选课&quot;</span>；
+    signal sqlstate <span class="token string">'HY000'</span> <span class="token keyword">set</span> message_text<span class="token operator">=</span>msg<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token comment">//</span>
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">10/23/2021, 4:31:30 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/views/sql/mysql-learning-notes.html#创建数据库和表" class="sidebar-link reco-side-创建数据库和表" data-v-70334359>创建数据库和表</a></li><li class="level-2" data-v-70334359><a href="/views/sql/mysql-learning-notes.html#增删改查" class="sidebar-link reco-side-增删改查" data-v-70334359>增删改查</a></li><li class="level-2" data-v-70334359><a href="/views/sql/mysql-learning-notes.html#示例" class="sidebar-link reco-side-示例" data-v-70334359>示例</a></li><li class="level-2" data-v-70334359><a href="/views/sql/mysql-learning-notes.html#例二" class="sidebar-link reco-side-例二" data-v-70334359>例二</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.9f33a869.js" defer></script><script src="/assets/js/3.5b4d8017.js" defer></script><script src="/assets/js/1.fb27f29e.js" defer></script><script src="/assets/js/45.06341d99.js" defer></script>
+  </body>
+</html>
